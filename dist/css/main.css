@@ -1,21 +1,27 @@
-/* 基础样式 - 保持不变 */
+/* 基础样式 - 保持原有核心设定 */
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
 }
 
-/* GitHub角标 - 保持原有样式 */
+/* GitHub角标 - 保持原有功能 */
 .github-corner {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   height: 5vh;
   width: auto;
-  transform: scale(0.8);
+  transform: scale(0.85);
   transform-origin: top right;
+  transition: transform 0.2s ease;
+}
+
+.github-corner:hover {
+  transform: scale(0.9);
 }
 
 .github-corner svg {
@@ -27,115 +33,162 @@ body {
   color: #fff;
 }
 
-/* 新增：主容器布局 */
-.container {
-  max-width: 900px;
+/* 主容器 - 新增 */
+.subconverter-container {
+  max-width: 920px;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 60px; /* 为GitHub角标留空间 */
 }
 
-/* 头部区域 - 调整间距 */
+/* 头部区域 - 增强视觉效果 */
 header {
-  margin: 30px 0 20px;
+  margin: 0 0 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaecef;
 }
 
 header h1 {
   text-align: center;
+  font-size: 2rem;
   color: #2c3e50;
-  font-size: 28px;
+  margin: 0;
+  font-weight: 600;
 }
 
-/* 表单整体布局 - 新增卡片效果 */
+/* 表单区域 - 卡片式设计 */
 .form {
-  background: white;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
   margin: 0 auto;
 }
 
-/* 表单行布局 - 改为flex布局 */
+/* 表单项目 - 改为flex布局 */
 .layui-form-item {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   align-items: center;
 }
 
 /* 标签样式 - 微调 */
 .layui-form-label {
-  padding: 9px 0;
-  width: 120px; /* 稍微加宽 */
-  font-weight: 600;
-  color: #2c3e50;
+  padding: 10px 0;
+  width: 130px;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 15px;
 }
 
 .layui-form-label.required::before {
-  color: red;
+  color: #f56565;
   content: "* ";
 }
 
-/* 输入区域布局 - 保持原有边距 */
+/* 输入区域 - 优化交互 */
 .layui-input-block, 
 .layui-input-inline {
-  margin-left: 120px; /* 与标签宽度一致 */
+  margin-left: 130px;
   flex: 1;
-  min-width: 0; /* 防止flex项目溢出 */
+  min-width: 0;
 }
 
-/* 行内元素布局调整 */
-.form .layui-form-item.inline {
-  display: inline-flex;
-  margin-right: 20px;
-  width: auto;
-}
-
-/* 输入框样式增强 */
 .layui-input, 
 .layui-select, 
 .layui-textarea {
   width: 100%;
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: all 0.3s;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.25s;
+  background-color: #f8fafc;
 }
 
 .layui-input:focus, 
 .layui-select:focus, 
 .layui-textarea:focus {
   border-color: #5fb878;
-  box-shadow: 0 0 0 3px rgba(95, 184, 120, 0.1);
+  box-shadow: 0 0 0 3px rgba(95, 184, 120, 0.15);
+  background-color: #fff;
+  outline: none;
 }
 
-/* 按钮样式增强 */
+/* 多链接输入框特殊样式 */
+#original-url {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* 按钮样式 - 增强视觉效果 */
 .button {
   background-color: #5fb878;
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 12px 0;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.25s;
   width: 100%;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
 }
 
 .button:hover {
   background-color: #4ca56a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(95, 184, 120, 0.2);
 }
 
-/* 结果区域 */
+/* 结果区域 - 更明显的视觉区分 */
 .result {
-  margin-top: 20px;
-  padding: 15px;
-  background: #f8f9fa;
-  border-radius: 4px;
+  margin-top: 25px;
+  padding: 18px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
-/* 表单底部布局 */
+/* 响应式设计 - 移动端适配 */
+@media (max-width: 768px) {
+  .subconverter-container {
+    padding: 15px;
+    padding-top: 50px;
+  }
+  
+  .form {
+    padding: 20px;
+  }
+  
+  .layui-form-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .layui-form-label {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .layui-input-block,
+  .layui-input-inline {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .form .layui-form-item.inline {
+    display: flex;
+    width: 100%;
+  }
+}
+
+/* 保留您原有的特殊样式 */
 .form-footer {
   margin-top: 25px;
   text-align: center;
@@ -143,25 +196,4 @@ header h1 {
 
 .form-footer .layui-input-block {
   margin: 0;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-  .layui-form-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .layui-input-block,
-  .layui-input-inline {
-    margin-left: 0;
-    width: 100%;
-    margin-top: 8px;
-  }
-  
-  .form .layui-form-item.inline {
-    display: flex;
-    width: 100%;
-    margin-right: 0;
-  }
 }

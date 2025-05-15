@@ -13,7 +13,7 @@ body {
   right: 0;
   top: 0;
   z-index: 10;
-  height: 5vh;
+  height: 100px;
   width: auto;
   transform: scale(0.85);
   transform-origin: top right;

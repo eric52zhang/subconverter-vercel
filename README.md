@@ -16,3 +16,5 @@ Build Command：npm run build
 Output Directory：dist
 
 部署即可！
+
+可以先在本地运行测试： npm install 并尝试 npm run serve 或 npm run build

@@ -17,4 +17,10 @@ Output Directory：dist
 
 部署即可！
 
-可以先在本地运行测试： npm install 并尝试 npm run serve 或 npm run build
+可以先在本地运行测试:
+
+安装依赖: npm install
+
+构建项目：npm run build
+
+启动开发服务器：npm run serve

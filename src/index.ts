@@ -79,5 +79,3 @@ layui.use(['form'], () => {
         window.open(url);
     });
 });
-
-

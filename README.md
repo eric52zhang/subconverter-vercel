@@ -24,3 +24,5 @@ Output Directory：dist
 构建项目：npm run build
 
 启动开发服务器：npm run serve
+
+备注：基于cm大佬项目https://github.com/cmliu/SUBWEB ，我改进了vercel支持

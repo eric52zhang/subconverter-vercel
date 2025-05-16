@@ -66,6 +66,9 @@ export const backendConfig = [{
     label: 'sub.d1.mk(肥羊提供-备用后端)',
     value: 'https://sub.d1.mk/sub?'
 }, {
+    label: 'op.xiagao.site(me-备用后端)',
+    value: 'http://op.xiagao.site:25500/sub?'
+}, {
     label: 'localhost:25500(自建本地服务)',
     value: 'http://localhost:25500/sub?'
 }];
